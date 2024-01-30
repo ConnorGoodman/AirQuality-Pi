@@ -1,6 +1,6 @@
 # Air Quality Monitoring System
 
-This Python script is designed for monitoring air quality and carbon dioxide (CO2) levels using an MH-Z19 sensor and sending the collected data to the Adafruit IO platform.
+This Python script is designed to run on a Raspberry Pi Zero W 2, and is for monitoring air quality and carbon dioxide (CO2) levels using an MH-Z19 sensor and sending the collected data to the Adafruit IO platform.
 
 ## Prerequisites
 
@@ -16,9 +16,9 @@ This Python script is designed for monitoring air quality and carbon dioxide (CO
    pip install mh-z19
    ```
 
-2. Im using the nova PM sensor. Make sure your PM sensor is connected to your system via a serial port (e.g., `/dev/ttyUSB0`). Adjust the `ser = serial.Serial('/dev/ttyUSB0')` line if your PM sensor is connected to a different serial port.
+2. I'm using the Nova PM sensor. Make sure your PM sensor is connected to your system via a serial port (e.g., `/dev/ttyUSB0`). Adjust the `ser = serial.Serial('/dev/ttyUSB0')` line if your PM sensor is connected to a different serial port.
 
-3. In this example, the mh-z19c co2 sensor is connected using pwm. If you wish to connect it using UART, the code will have to be adjusted accordingly.
+3. In this example, the MH-Z19c co2 sensor is connected using pwm. If you wish to connect it using UART, the code will have to be adjusted accordingly.
 
 4. Set up an account on [Adafruit IO](https://io.adafruit.com/) and obtain your Adafruit IO key and username.
 
@@ -37,7 +37,7 @@ This Python script is designed for monitoring air quality and carbon dioxide (CO
 
 Run the script using the following command:
 ```
-python air_quality_monitor.py
+python main.py
 ```
 
 The script will continuously read data from the MH-Z19 sensor and send the PM2.5, PM10, and CO2 measurements to your Adafruit IO dashboard every 30 seconds.
