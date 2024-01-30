@@ -47,6 +47,7 @@ The script will continuously read data from the MH-Z19 sensor and send the PM2.5
 If you encounter any issues while running the script, check the following:
 
 - Ensure the MH-Z19 sensor is properly connected to your system.
+- Ensure the PM sensor is properly connected to your system.
 - Confirm the correct serial port is specified in the script (`ser = serial.Serial('/dev/ttyUSB0')`).
 - Verify that the Adafruit IO key and username are correctly set in the script.
 
